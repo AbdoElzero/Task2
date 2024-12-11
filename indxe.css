@@ -100,7 +100,6 @@ body{
   cursor: pointer;
   position: relative;
   margin: 0;
-  line-height: 1;
 }
 .layerblack p::before {
   position: absolute;
