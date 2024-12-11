@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #111;
+}
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #111;
+}
+.circle-container {
+  position: relative;
+  width: 289px;
+  height: 289px;
+  margin: auto;
+}
+
+.layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    red,
+    orange,
+    yellow,
+    green,
+    cyan,
+    blue,
+    purple,
+    red
+  );
+  animation: spin 6s linear infinite;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.layerblack{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: black;
+
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.layer:nth-child(1) {
+  width: 100%;
+  height: 100%;
+  animation-delay: 0s;
+}
+
+.layer:nth-child(2) {
+  width: 90%;
+  height: 90%;
+  animation-delay: -0.5s;
+  margin: 5%;
+}
+
+.layer:nth-child(3) {
+  width: 80%;
+  height: 80%;
+  animation-delay: -1s;
+  margin: 10%;
+}
+
+.layer:nth-child(4) {
+  width: 70%;
+  height: 70%;
+  animation-delay: -1.5s;
+  margin: 15%;
+}
+
+.layerblack:nth-child(5) {
+  width: 60%;
+  height: 60%;
+  animation-delay: -1.5s;
+  margin: 20%;
+  
+}
+.layerblack p {
+  font-size: 58px;
+  color: black;
+  background-color: white;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  text-align: center;
+  padding: 0%;
+  cursor: pointer;
+  position: relative;
+  margin: 0;
+  line-height: 1;
+}
+.layerblack p::before {
+  position: absolute;
+  content: "Click here";
+  font-size: 14px;
+  width: 70px;
+  left: 0;
+  top: -40px;
+  background: #FFF;
+  padding: 6px 4px;
+  border-radius: 15px 0px 15px 0px;
+  display: none;
+  transition: 0.3s;
+}
+.layerblack p:hover::before {
+  display: block;
+}
+.page .boxs {
+  color: #e51616;
+  max-width: 600px;
+  margin: auto;
+}
+.page .boxs .one { 
+  background: azure;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  border-radius: 7px;
+  width: 120px;
+  margin-bottom: 10px;
+  margin-top: 10px
+}
+.row {
+  align-items: center;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
