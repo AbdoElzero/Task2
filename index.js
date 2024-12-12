@@ -1,5 +1,5 @@
 let layer = document.querySelector(".circle-container")
-let layerBlack = document.querySelector(".circle-container .layerblack p")
+let layerBlack = document.querySelector(".circle-container .layerblack span")
 let boxs = document.querySelector(".page .boxs")
 
 
